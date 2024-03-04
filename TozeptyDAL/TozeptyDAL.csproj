@@ -64,9 +64,14 @@
     <Compile Include="Migrations\202403041935448_addingCustomertable.designer.cs">
       <DependentUpon>202403041935448_addingCustomertable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403042012576_product.cs" />
+    <Compile Include="Migrations\202403042012576_product.Designer.cs">
+      <DependentUpon>202403042012576_product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403041935448_addingCustomertable.resx">
       <DependentUpon>202403041935448_addingCustomertable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403042012576_product.resx">
+      <DependentUpon>202403042012576_product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
