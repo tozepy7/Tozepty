@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using TozeptyDAL;
+using TozeptyDAL.Models;
 
 namespace TozeptyDAL.Data
 {
@@ -19,6 +20,7 @@ namespace TozeptyDAL.Data
         }
 
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
