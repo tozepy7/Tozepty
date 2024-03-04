@@ -14,7 +14,7 @@ namespace TozeptyDAL.Models
         public int CartId { get; set; }
 
         [Required(ErrorMessage = "Customer is required.")]
-        public int CusomerId { get; set; }
+        public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
         [Required(ErrorMessage = "Product name is required.")]
