@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tozepty", "Tozepty\Tozepty.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TozeptyDAL", "TozeptyDAL\TozeptyDAL.csproj", "{35A600F8-1E48-47FE-B084-37C77FE8A719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{9D182F9E-05D6-45C2-9DF8-5F02D1DB6FD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TozeptyUnitTest", "TestProject1\TozeptyUnitTest.csproj", "{9D182F9E-05D6-45C2-9DF8-5F02D1DB6FD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
