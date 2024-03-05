@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202403042120432_updateTablewithmoreEntities02.designer.cs">
       <DependentUpon>202403042120432_updateTablewithmoreEntities02.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403052323513_fixedTypo.cs" />
+    <Compile Include="Migrations\202403052323513_fixedTypo.designer.cs">
+      <DependentUpon>202403052323513_fixedTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -130,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403042120432_updateTablewithmoreEntities02.resx">
       <DependentUpon>202403042120432_updateTablewithmoreEntities02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403052323513_fixedTypo.resx">
+      <DependentUpon>202403052323513_fixedTypo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
