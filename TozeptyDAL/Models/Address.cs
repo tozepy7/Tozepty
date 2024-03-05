@@ -19,5 +19,9 @@ namespace TozeptyDAL.Models
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
 
+        public static implicit operator string(Address v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
