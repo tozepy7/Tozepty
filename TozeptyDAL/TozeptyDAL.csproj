@@ -59,6 +59,7 @@
     <Compile Include="Interfaces\IAddressRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
     <Compile Include="Interfaces\ICategory.cs" />
+    <Compile Include="Interfaces\IOrderRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\ICartRepository.cs" />
     <Compile Include="Migrations\202403041859577_firstMigration.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Repository\AddressRepository.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\CartRepository.cs" />
   </ItemGroup>
