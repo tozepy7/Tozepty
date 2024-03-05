@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TozeptyDAL.Data;
+using TozeptyDAL.Interfaces;
 using TozeptyDAL.Models;
 
 namespace TozeptyDAL.Repository
 {
-    public class AddressRepository
+    public class AddressRepository : IAddressRepository
     {
 
         private readonly FoodDbContext _dbContext;
