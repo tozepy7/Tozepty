@@ -12,7 +12,9 @@ namespace TozeptyDAL.Interfaces
         // Create
         Customer GetCustomerByUserNamePhone(string UserName, string PhoneNumber);
         int customerSAveChanges();
-        Cart GetCartItemByProductIdAndCustomerId(int productId, int customerId);
+
+        //Cart GetCartItemByProductIdAndCustomerId(int productId, int customerId);
+        
         Customer GetCustomerByUserName(string userName);
         
         Customer CreateCustomer(Customer customer);

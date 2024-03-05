@@ -34,11 +34,11 @@ namespace TozeptyDAL.Repository
                 .Where(c => c.CustomerId == customerId)
                 .ToList();
         }
-        public Cart GetCartItemByProductIdAndCustomerId(int productId, int customerId)
-        {
-            return dbContext.Carts
-                .FirstOrDefault(c => c.ProductId == productId && c.CustomerId == customerId);
-        }
+        //public Cart GetCartItemByProductIdAndCustomerId(int productId, int customerId)
+        //{
+        //    return dbContext.Carts
+        //        .FirstOrDefault(c => c.ProductId == productId && c.CustomerId == customerId);
+        //}
         // Create
         public Cart CreateCartItem(Cart cartItem)
         {
