@@ -51,6 +51,8 @@ namespace TozeptyDAL.Models
 
         [Required(ErrorMessage = "Address is Required.")]
         [MaxLength(500)]
+
+
         public string Address { get; set; }
         public int RoleId { get; set; }
         public virtual Role Role { get; set; }
