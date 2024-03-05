@@ -58,7 +58,7 @@
     <Compile Include="Data\FoodDbContext.cs" />
     <Compile Include="Interfaces\IAddressRepository.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />
-    <Compile Include="Interfaces\ICategory.cs" />
+    <Compile Include="Interfaces\ICategoryRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
     <Compile Include="Interfaces\ICartRepository.cs" />
     <Compile Include="Migrations\202403041859577_firstMigration.cs" />

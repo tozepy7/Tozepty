@@ -7,7 +7,7 @@ using TozeptyDAL.Models;
 
 namespace TozeptyDAL.Interfaces
 {
-    public interface ICategory
+    public interface ICategoryRepository
     {
         int GetLastCategoryId();
         int SaveCategory(Category category);

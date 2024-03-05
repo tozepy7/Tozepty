@@ -9,7 +9,7 @@ using TozeptyDAL.Models;
 
 namespace TozeptyDAL.Repository
 {
-    public class CategoryRepository : ICategory
+    public class CategoryRepository : ICategoryRepository   
     {
         private readonly FoodDbContext dbContext;
         public CategoryRepository(FoodDbContext dbContext)
