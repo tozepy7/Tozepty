@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Security;
-using System.Web.UI.WebControls;
 using Tozepty.Models;
 using TozeptyDAL.Interfaces;
 
@@ -15,7 +10,7 @@ namespace Tozepty.Controllers
         private readonly IAdminRepository adminRepository;
         private readonly ICustomerRepository customerRepository;
 
-       
+
         public AccountController(
             IAdminRepository adminRepository,
             ICustomerRepository customerRepository
@@ -43,6 +38,7 @@ namespace Tozepty.Controllers
             var isAdmin = true;
 
 
+
             if (isAdmin)
             {
                 var user = adminRepository.GetAdminByUserName(loginView.UserName);
@@ -59,5 +55,18 @@ namespace Tozepty.Controllers
                 return View(loginView);
             }
         }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            Session.Clear();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
     }
+
+
 }

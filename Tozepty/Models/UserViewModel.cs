@@ -8,21 +8,23 @@ namespace Tozepty.Models
 {
     public class UserViewModel
     {
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "First name is required.")]
-        [MaxLength(50)]
-        [RegularExpression(@"^[A-Za-z]{3,15}$", ErrorMessage = "Only contain character")]
+        [StringLength(50, ErrorMessage = "First name cannot exceed 50 characters.")]
+        [RegularExpression(@"^[A-Za-z]{3,15}$", ErrorMessage = "First name can only contain alphabets and must be between 3 to 15 characters.")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = "Last name is required.")]
-        [MaxLength(50)]
-        [RegularExpression(@"^[A-Za-z]{3,15}$", ErrorMessage = "Only contain character")]
+        [StringLength(50, ErrorMessage = "Last name cannot exceed 50 characters.")]
+        [RegularExpression(@"^[A-Za-z]{3,15}$", ErrorMessage = "Last name can only contain alphabets and must be between 3 to 15 characters.")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Email address is required.")]
         [EmailAddress(ErrorMessage = "Invalid email address.")]
-        [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", ErrorMessage = "Invalid email address format.")]
+        [StringLength(255, ErrorMessage = "Email address cannot exceed 255 characters.")]
+
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Phone number is required.")]
@@ -30,10 +32,9 @@ namespace Tozepty.Models
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Username is required.")]
-        [MaxLength(255)]
-        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9_-]{4,15}$", ErrorMessage = "Only letters, numbers, and underscores are allowed.")]
+        [StringLength(15, MinimumLength = 4, ErrorMessage = "Username must be between 4 to 15 characters.")]
+        [RegularExpression(@"^[A-Za-z0-9_-]+$", ErrorMessage = "Username can only contain letters, numbers, underscores, and hyphens.")]
         public string UserName { get; set; }
-
 
         [Required(ErrorMessage = "Password is required.")]
         [DataType(DataType.Password)]
@@ -46,7 +47,6 @@ namespace Tozepty.Models
         [MaxLength(255)]
         [Display(Name = "Confirm Password")]
         public string ConfirmPassword { get; set; }
-
         [Required(ErrorMessage = "Please select a user type.")]
         public int UserType { get; set; }
     }
