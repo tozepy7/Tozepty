@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Tozepty.Models
 {
-    public class EditUserViewModel
+    public class UserViewModel
     {
         public int Id { get; set; }
 
@@ -34,5 +34,20 @@ namespace Tozepty.Models
         [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9_-]{4,15}$", ErrorMessage = "Only letters, numbers, and underscores are allowed.")]
         public string UserName { get; set; }
 
+
+        [Required(ErrorMessage = "Password is required.")]
+        [DataType(DataType.Password)]
+        [MaxLength(255)]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$", ErrorMessage = "Password must have at least 8 characters, one uppercase letter, one lowercase letter, and one digit.")]
+        public string Password { get; set; }
+
+        [Compare("Password", ErrorMessage = "The password and confirm password do not match.")]
+        [DataType(DataType.Password)]
+        [MaxLength(255)]
+        [Display(Name = "Confirm Password")]
+        public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Please select a user type.")]
+        public int UserType { get; set; }
     }
 }
