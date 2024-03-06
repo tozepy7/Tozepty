@@ -1,0 +1,38 @@
+﻿@model List<Tozepty.Models.CustomerViewModel>
+@{
+    ViewBag.Title = "Customer List";
+}
+
+<h2>Customer List</h2>
+
+<table class="col-md-12 table bg-gradient">
+    <thead>
+        <tr class="col-md-12">
+            <th class="text-center text-uppercase">Customer Name</th>
+            <th class="text-center text-uppercase">Action</th>
+            <!-- Add other columns as needed -->
+        </tr>
+    </thead>
+    <tbody class="col-md-12 bg-dark text-white">
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td class="text-center">@customer.FirstName @customer.LastName </td>
+                <td class="text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item btn-outline-success text-center"><a href="@Url.Action("ViewOrderedProducts", "Admin", new { customerId = customer.Id })" class="btn btn-success">View Order</a></li>
+                        <li class="list-inline-item text-center  btn-outline-info"><a href="@Url.Action("ViewCustomerDetails", "Admin", new { customerId = customer.Id })" class="btn btn-primary">View Profile</a></li>
+                    </ul>
+
+
+                </td>
+                <!-- Add other columns as needed -->
+            </tr>
+        }
+    </tbody>
+
+
+
+
+</table>
+
