@@ -1,19 +1,32 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+@if (Session["userInRole"] != null && (int)Session["userInRole"] == 1)
+{
+    <main aria-labelledby="title">
+        <h2 id="title">@ViewBag.Title</h2>
+        <h3>@ViewBag.Message</h3>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
-</main>
+        <address>
+            One Microsoft Way<br />
+            Redmond, WA 98052-6399<br />
+            <abbr title="Phone">P:</abbr>
+            425.555.0100
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>
+
+        <!-- Logout button -->
+        <form action="@Url.Action("Logout", "Account")" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </main>
+}
+else
+{
+    <h2>You don't have access yet. Please sign in.</h2>
+}
